@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>2025 Advent of Code</title>
+</head>
+<body>
+	<h1>2025 Advent of Code</h1>
+	<div>
+		<label for="day-select">Select Day:</label>
+		<select name="day-select" id="day-select">
+			<option value="1">Day 1</option>
+			<option value="2">Day 2</option>
+			<option value="3">Day 3</option>
+			<option value="4">Day 4</option>
+			<option value="5">Day 5</option>
+			<option value="6">Day 6</option>
+			<option value="7">Day 7</option>
+			<option value="8">Day 8</option>
+			<option value="9">Day 9</option>
+			<option value="10">Day 10</option>
+			<option value="11">Day 11</option>
+			<option value="12">Day 12</option>
+		</select>
+	</div>
+	<div>
+		<label for="part-select">Select Part:</label>
+		<select name="part-select" id="part-select">
+			<option value="1">Part 1</option>
+			<option value="2">Part 2</option>
+		</select>
+	</div>
+	<div>
+		<label for="type-select">Select Type:</label>
+		<select name="type-select" id="type-select">
+			<option value="0">Example input</option>
+			<option value="1">Real input</option>
+		</select>
+	</div>
+	<div>
+		<button id="js-run">Run</button>
+	</div>
+	<h2>Result:</h2>
+	<div id="js-result"></div>
+	<script src="helpers.js"></script>
+	<script src="day1.js"></script>
+	<script src="other/inputs.js"></script>
+	<script>
+		document.getElementById('js-run').addEventListener('click', doDay);
+		let resultElement = document.getElementById('js-result');
+
+		function doDay() {
+			const day = document.getElementById('day-select').value;
+			const part = document.getElementById('part-select').value;
+			const useReal = document.getElementById('type-select').value;
+
+			let result = helpers.getResult(day, part, useReal);
+			resultElement.innerHTML = result;
+		}
+	</script>
+</body>
+</html>
