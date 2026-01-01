@@ -1,36 +1,28 @@
-const helpers = (function() {
-	let day = 1;
-	let part = 1;
-	let useReal = 0;
-	return {
-		getResult: function(selectedDay, selectedPart, selectedType) {
-			day = parseInt(selectedDay);
-			part = parseInt(selectedPart);
-			useReal = parseInt(selectedType);
+module.exports = {
+	getResult: function(day, part, input) {
 
-			let dayFunctions = null;
-			switch (day) {
-				case 1:
-					dayFunctions = day1;
-					break;
-			}
-
-			if (!dayFunctions) {
-				return 'Day not implemented yet.'
-			}
-			
-			return dayFunctions.getResult(part);
-		},
-		getInput: function() {
-			let input = '';
-			if (useReal) {
-				input = inputs[day - 1] || '';
-			}
-			else {
-				input = examples[day - 1] || '';
-			}
-
-			return input;
+		let dayFunctions = null;
+		switch (day) {
+			case 1:
+				dayFunctions = require('./day1');
+				break;
+			case 2:
+				dayFunctions = require('./day2');
+				break;
 		}
-	};
-})();
+
+		if (!dayFunctions) {
+			return 'Day not implemented yet.'
+		}
+
+		return dayFunctions.getResult(part, input);
+	},
+	getInput: function(day, useRealInput) {
+		const fs = require('node:fs');
+		let filepath = useRealInput ? `other/inputs/day${day}_input.txt` : `other/inputs/day${day}_example.txt`;
+		if (!fs.existsSync(filepath)) {
+			return '';
+		}
+		return fs.readFileSync(filepath, 'utf8');
+	}
+};
