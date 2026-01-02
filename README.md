@@ -10,3 +10,7 @@ Part 2: Use prime number factorization to check if numbers in ranges matches rep
 
 ## Day 3
 Use pointers to find largest number in sequence.
+
+## Day 4
+Part 1: Loop through map once and check each adjacent position, sum number of rolls and check if roll is accessible.  
+Part 2: Same as part 1, but loop though map multiple times and remove rolls until no more accessible rolls are found.
