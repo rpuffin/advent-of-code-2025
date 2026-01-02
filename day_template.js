@@ -1,6 +1,5 @@
 module.exports = {
-	getResult: function(part = 1) {
-		let input = helpers.getInput();
+	getResult: function(part, input) {
 		let parsedInput = this.parseInput(input);
 
 		if (part === 1) {

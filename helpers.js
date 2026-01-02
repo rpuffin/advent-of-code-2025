@@ -6,8 +6,13 @@ module.exports = {
 			case 1:
 				dayFunctions = require('./day1');
 				break;
+
 			case 2:
 				dayFunctions = require('./day2');
+				break;
+
+			case 3:
+				dayFunctions = require('./day3');
 				break;
 		}
 
