@@ -14,3 +14,7 @@ Use pointers to find largest number in sequence.
 ## Day 4
 Part 1: Loop through map once and check each adjacent position, sum number of rolls and check if roll is accessible.  
 Part 2: Same as part 1, but loop though map multiple times and remove rolls until no more accessible rolls are found.
+
+## Day 5
+Part 1: Simply looping each ingredient ID and checking against intervals.  
+Part 2: Merging overlapping intervals to be able to use subtraction to find result.
