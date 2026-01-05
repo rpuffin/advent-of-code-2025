@@ -18,3 +18,6 @@ Part 2: Same as part 1, but loop though map multiple times and remove rolls unti
 ## Day 5
 Part 1: Simply looping each ingredient ID and checking against intervals.  
 Part 2: Merging overlapping intervals to be able to use subtraction to find result.
+
+## Day 6
+Array manipulation and traversal.
