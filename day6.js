@@ -3,6 +3,8 @@ module.exports = {
 		let parsedInput = this.parseInput(input);
 
 		if (part === 1) {
+			// What is the sum of all columns combined?
+
 			// Remove any spaces in the input, splitting each line into an array of numbers/operators
 			parsedInput = parsedInput.map(line => line.trim().split(/\s+/));
 
@@ -32,6 +34,8 @@ module.exports = {
 			return 'Grand total: ' + totals.reduce((acc, val) => acc + val, 0);
 		}
 		else {
+			// What is the sum of all columns combined, when columns are read right-to-left and each number is given in its own column?
+
 			// Make each line in input an array with one character in each element to be able to loop through columns
 			parsedInput = parsedInput.map(line => line.split(''));
 			
