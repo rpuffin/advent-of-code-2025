@@ -8,7 +8,6 @@ module.exports = {
 			for (let line of parsedInput) {
 				// Make line into array of numbers
 				let numbers = line.split('').map(Number);
-				console.log(numbers);
 
 				let first = 0;
 				let second = 0;
