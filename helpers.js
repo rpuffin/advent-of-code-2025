@@ -30,6 +30,10 @@ module.exports = {
 			case 7:
 				dayFunctions = require('./day7');
 				break;
+
+			case 8:
+				dayFunctions = require('./day8');
+				break;
 		}
 
 		if (!dayFunctions) {

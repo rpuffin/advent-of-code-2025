@@ -27,3 +27,6 @@ Array manipulation and traversal.
 Convert input to a 2D array.  
 Part 1: Use a set to store unique columns that have a beam in them. Loop through map and check for splitters in beam columns. Use new set in loop to keep track of new beam columns.  
 Part 2: BFS. Use array to store the number of beams in each input column. Loop through each row and column of input to check for splitters, updating number of particles in each column.
+
+## Day 8
+Calculate distance between each pair of junction boxes and sort in ascending order. Loop through sorted distances and connect pairs in circuits, also checking if connecting a pair connects separate circuits. Pairs already in circuit is not skipped in part 1.
