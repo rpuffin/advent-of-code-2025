@@ -1,6 +1,6 @@
 const helpers = require('./helpers');
 
-let day = 7;
+let day = 8;
 let part = 2;
 let useRealInput = true;
 
