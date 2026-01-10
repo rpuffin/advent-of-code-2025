@@ -30,3 +30,8 @@ Part 2: BFS. Use array to store the number of beams in each input column. Loop t
 
 ## Day 8
 Calculate distance between each pair of junction boxes and sort in ascending order. Loop through sorted distances and connect pairs in circuits, also checking if connecting a pair connects separate circuits. Pairs already in circuit is not skipped in part 1.
+
+## Day 9
+Part 1: Double for loop on every possible pair of coordinates to check each rectangle and keeping track of largest area.  
+Part 2: Input is a continuous, clock-wise shape. Map out all lines in rows and columns to use as lookup. Double for loop to check every possible rectangle against lookup, check if any line is intersecting the outer border of the rectangle and if any part of the line ends up inside the rectangle. If rectangle is intersected then it's not valid.  
+There's an edge case in part 2 I didn't take into account, when a rectangle is fully outside of the shape. Solution will incorrectly mark those as valid. Didn't matter with my input.
